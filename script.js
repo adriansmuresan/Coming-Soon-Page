@@ -7,10 +7,15 @@ form.addEventListener('submit', e => {
 
   if(!emailValue) {
     // say it's empty
-  } else if (emailValue(email)) {
+  } else if (!isValidEmail(email)) {
     //say invalid
   } else {
     //submit it
   }
 
 });
+
+function isValidEmail(email) {
+  const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
