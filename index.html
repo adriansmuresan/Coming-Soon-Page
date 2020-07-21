@@ -11,14 +11,16 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
 
     <title>Frontend Mentor | Ping coming soon page</title>
   </head>
   <body>
-
     <main>
       <img src="./images/logo.svg" alt="logo" />
       <h1>We are launching <strong>soon!</strong></h1>
@@ -26,13 +28,23 @@
       <h2>Subscribe and get notified</h2>
 
       <form id="form">
-        <input id="email" type="email" placeholder="Your Email here.."/>
-        <button>
-          Notify Me
-        </button>
+        <div class="form-left">
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Your Email here.."
+          />
+          <small>Please provide a valid email address</small>
+        </div>
+        <button>Notify Me</button>
       </form>
 
-      <img class="illustration" src="./images/illustration-dashboard.png" alt="illustration">
+      <img
+        class="illustration"
+        src="./images/illustration-dashboard.png"
+        alt="illustration"
+      />
 
       <footer>
         <ul class="social-list">
@@ -55,6 +67,5 @@
         <p>&copy; Copyright Ping. All rights reserved.</p>
       </footer>
     </main>
-
   </body>
 </html>
