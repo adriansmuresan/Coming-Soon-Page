@@ -45,6 +45,10 @@ input {
   font-size: 16px;
 }
 
+input::placeholder {
+  color: hsl(0, 0%, 59%);
+}
+
 button {
   background-color: hsl(223, 87%, 63%);
   border-radius: 50px;
@@ -55,6 +59,12 @@ button {
   border: none;
   font-weight: 600;
   margin-left: 20px;
+  box-shadow: 0 5px 5px hsl(223, 100%, 88%);
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
 }
 
 .illustration {
@@ -84,6 +94,12 @@ button {
   justify-content: center;
   align-items: center;
   text-decoration: none;
+  cursor: pointer;
+}
+
+.social-list li a:hover {
+  background-color:hsl(223, 87%, 63%);
+  color: #fff;
 }
 
 footer p {
