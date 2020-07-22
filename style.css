@@ -51,6 +51,15 @@ input {
   width: 100%;
   font-family: 'Libre Franklin', sans-serif;
   font-size: 16px;
+  margin-bottom: 15px;
+}
+
+input.error {
+  border-color: hsl(354, 100%, 66%);
+}
+
+input.error::placeholder {
+  color: hsl(354, 100%, 66%);
 }
 
 input::placeholder {
@@ -79,7 +88,8 @@ button:hover {
 form small {
   color: hsl(354, 100%, 66%);
   font-style: italic;
-  margin: 10px 20px 40px;
+  display: none;
+  margin: 0 20px 40px;
 } 
 
 .illustration {
