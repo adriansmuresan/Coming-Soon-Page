@@ -3,14 +3,25 @@ const form = document.getElementById('form');
 form.addEventListener('submit', e => {
   e.preventDefault();
 
-  const emailValue = form['email'].value;
+  const email = form['email'];
+  const emailValue = email.value;
+  const small = form.querySelector('small');
 
   if(!emailValue) {
     // say it's empty
-  } else if (!isValidEmail(email)) {
+    email.classList.add('error');
+    small.innerText = 'Email field cannot be blank!';
+    small.style.display = 'inline-block';
+  } else if (!isValidEmail(emailValue)) {
     //say invalid
+    email.classList.add('error');
+    small.innerText = 'Email is not valid!';
+    small.style.display = 'inline-block';
   } else {
     //submit it
+    email.classList.remove('error');
+    small.innerText = '';
+    small.style.display = 'none';
   }
 
 });
